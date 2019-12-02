@@ -1,0 +1,23 @@
+package kfk.spark.core;
+
+import kfk.spark.common.CommSparkContext;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class IntersectionJava {
+    public static void main(String[] args) {
+        JavaSparkContext sc = CommSparkContext.getsc();
+        List list1 = Arrays.asList("cherry", "herry","leo");
+        List list2 = Arrays.asList("ben", "cherry");
+        JavaRDD rdd1 = sc.parallelize(list1);
+        JavaRDD rdd2 = sc.parallelize(list2);
+
+        JavaRDD intersecValues = rdd1.intersection(rdd2);
+        for (Object o : intersecValues.collect()) {
+            System.out.println(o);
+        }
+    }
+}

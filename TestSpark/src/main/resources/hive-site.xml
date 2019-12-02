@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://bigdata-pro-m03.kfk.com/metastore_spark?createDatabaseIfNotExist=true</value>
+	</property>
+	
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+	
+	
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>root</value>
+    </property>
+
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>123456</value>
+	</property>
+	
+	<property>
+		<name>hive.metastore.uris</name>
+		<value>thrift://bigdata-pro-m03.kfk.com:9083</value>
+	</property>
+	
+	<property>
+		<name>hive.cli.print.header</name>
+		<value>true</value>
+	</property>
+	
+	<property>
+		<name>hive.cli.print.current.db</name>
+		<value>true</value>
+	</property>
+	
+	
+
+</configuration>
